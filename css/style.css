@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Realce";
+    src: url("../fonts/cms_files_588093_1709521849Realce-Black.otf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+p{
+    font-family: "Noto Sans";
+}
+
+p + p{
+    margin-top: 1rem;
+}
+
+h1{
+    font-family: "Realce";
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #151B1F;
+}
+
+.subtitulo{
+    display: block;
+    font-family: "Noto Sans";
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #F0F2F4;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.span{
+    grid-column: 1/-1;
+}
+
+.text{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #282F38;
+}
+
+.legenda{
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #506273;
+}
+
+.bg .legenda{
+    color: #F0F2F4;
+}
+
+.bg h1{
+    color: #fff;
+}
+
+.bg{
+    background-image: linear-gradient(90deg, #457FCA, #5691C8);
+}
+
+.bg .text{
+    color: #F0F2F4;
+}
+
+.container{
+    padding: 60px 40px;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.header{
+    top: 0;
+    position: sticky;
+    padding: 32px 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu a{
+    font-family: "Realce";
+    font-size: 1.125rem;
+    color: #151B1F;
+    transition: .3s;
+}
+
+.menu a:hover, .menu a.active{
+    color: #457FCA;
+}
+
+.separador{
+    display: block;
+    margin: 0 auto;
+    max-width: 1240px;
+    width: 100%;
+    height: 4px;
+    background-color: #F0F2F4;
+    border: 4px;
+}
+
+
