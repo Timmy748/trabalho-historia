@@ -18,18 +18,18 @@
     <header class="header">
       <nav>
         <ul class="menu">
-          <li><a href="">Introdução</a></li>
-          <li><a href="">Contexto Histórico</a></li>
-          <li><a href="">Revoltas</a></li>
-          <li><a href="">Surgimento da Ideia</a></li>
-          <li><a href="">Projetos de Nação</a></li>
-          <li><a href="">Grito do Ipiranga</a></li>
-          <li><a href="">Narrativa Oficial</a></li>
-          <li><a href="">Reflexões</a></li>
+          <li><a href="#intro">Introdução</a></li>
+          <li><a href="#contexto">Contexto</a></li>
+          <li><a href="#revoltas">Revoltas</a></li>
+          <li><a href="#ideia">Ideia</a></li>
+          <li><a href="#projeto">Projetos</a></li>
+          <li><a href="#ipiranga">Ipiranga</a></li>
+          <li><a href="#narrativa">Narrativa</a></li>
+          <li><a href="#reflexoes">Reflexões</a></li>
         </ul>
       </nav>
     </header>
-    <main class="bg">
+    <main class="bg" id="intro">
       <div class="container">
         <div>
           <picture>
@@ -80,7 +80,7 @@
       </div>
     </main>
 
-    <section class="container">
+    <section class="container" id="contexto">
       <h1 class="span">Contexto Histórico ( 1808 – 1821 )</h1>
       <div>
         <p class="text">
@@ -125,7 +125,7 @@
     </section>
     <span class="separador"></span>
     
-    <section class="container">
+    <section class="container" id="revoltas">
       <div>
         <picture>
           <source media="(min-width: )" srcset="" />
@@ -174,7 +174,7 @@
       </div>
     </section>
 
-    <section class="bg">
+    <section class="bg" id="ideia">
       <div class="container">
         <div>
           <h1>Surgimento da Ideia de Independência.</h1>
@@ -220,7 +220,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="projeto">
       <h1 class="span" >Projetos de Nação e Conflitos de Objetivos</h1>
       <div>
         <p class="text">
@@ -265,11 +265,10 @@
       </div>
     </section>
 
-    <section class="container">
-      <picture class="span">
-        <source media="(min-width: )" srcset="" />
-        <img src="./fotos/grito_do_ipiranga.jpg" alt="Grito do Ipiranga"  data-descricao=""/>
-      </picture>
+    <section class="container" id="ipiranga">
+      <div class="span" id="img_ipiranga"  data-descricao="A imagem é uma pintura de 1888, do artista Pedro Américo. Representa a proclamação da independência do Brasil, especificamente “O Grito do Ipiranga”. Ao centro, aparece D. Pedro com sua espada e cavaleiros ao redor, a fim de exaltar poder, vitória e glorificação. Nota-se que a visão do artista focou em uma representação romantizada do fato, sem detalhes fiéis do ocorrido. Retrata uma visão artificial, uma vez que foi feita a pedidos de políticos conservadores.">
+        <img  src="./fotos/grito_do_ipiranga.jpg" alt="Grito do Ipiranga" />
+      </div>
       <h1 class="span">O Papel de São Paulo e o Grito do Ipiranga</h1>
       <div>
         <p class="text">
@@ -317,7 +316,7 @@
 
     <span class="separador"></span>
 
-    <section class="container">
+    <section class="container" id="narrativa">
       <div>
         <picture>
           <source media="(min-width: )" srcset="" />
@@ -368,7 +367,7 @@
 
     <span class="separador"></span>
     
-    <section class="container">
+    <section class="container" id="reflexoes">
       <h1 class="span">Reflexões Atuais e Legado</h1>
       <div>
         <p class="text">
@@ -411,6 +410,7 @@
         <p class="text">
           Para elaborar este conteúdo, utilizamos como fonte principal o site
           <a
+            class="text-light "
             target="_blank"
             href="https://www.olimpiadadehistoria.com.br/especiais/aindependenciaexposta/lista"
             >Olimpíada de História</a
@@ -422,16 +422,19 @@
 
       <div>
         <a
+          class="link-exposicao"
           target="_blank"
           href="https://prova.olimpiadadehistoria.com.br/prova/onhb13/publications/onhb13/exposicao_819.html?_gl=1*1pvihvs*_ga*ODg3OTg1NzQ2LjE3NDc1ODgzNzc.*_ga_LKZTWN4NX5*czE3NDc2NDc3NzkkbzUkZzEkdDE3NDc2NDc3NzkkajAkbDAkaDA."
           >Exposição 819</a
         >
         <a
+          class="link-exposicao"
           target="_blank"
           href="https://prova.olimpiadadehistoria.com.br/prova/onhb13/publications/onhb13/exposicao_1069.html?_gl=1*tdvqdh*_ga*ODg3OTg1NzQ2LjE3NDc1ODgzNzc.*_ga_LKZTWN4NX5*czE3NDc2NDc3NzkkbzUkZzEkdDE3NDc2NDc3NzkkajAkbDAkaDA."
           >Exposição 1069</a
         >
         <a
+          class="link-exposicao"
           target="_blank"
           href="https://prova.olimpiadadehistoria.com.br/prova/onhb13/publications/onhb13/exposicao_1149.html?_gl=1*1pvihvs*_ga*ODg3OTg1NzQ2LjE3NDc1ODgzNzc.*_ga_LKZTWN4NX5*czE3NDc2NDc3NzkkbzUkZzEkdDE3NDc2NDc3NzkkajAkbDAkaDA."
           >Exposição 1149</a
