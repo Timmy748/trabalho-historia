@@ -97,6 +97,7 @@ html{
 
 
 .header {
+  background-color: #fff;
   top: 0;
   position: sticky;
   z-index: 10000;
@@ -200,7 +201,18 @@ p a{
     background-image: linear-gradient(90deg, #457fca, #5691c8);
     z-index: -4;
     filter: blur(200px);
-    animation: piscar 2s ease-in-out infinite;
+    animation: piscar 3s ease-in-out infinite;
+}
+
+#menu-button{
+  display: none;
+  font-family: "Realce";
+  color: #fff;
+  border: none;
+  background: #457fca;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @keyframes piscar {
@@ -208,7 +220,7 @@ p a{
         opacity: 0;
     }
     50%{
-        opacity: 1;
+        opacity: .5;
     }
     100%{
         opacity: 0;
@@ -224,7 +236,7 @@ p a{
   transition: 0.3s;
   }
   .menu{
-        gap: 20px;
+    gap: 20px;
   }
   .header{
     padding: 16px 20px;
@@ -233,6 +245,32 @@ p a{
 
 
 @media (max-width:760px) {
+
+    
+
+    #menu-button{
+      display: block;
+    }
+    .menu{
+      display: none;
+    }
+
+    .menu.active{
+      display: flex;
+      padding: 20px;
+      background-color: #fff;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      flex-direction: column;
+    }
+
+    .menu.active a{
+      font-size: 2rem;
+    }
+
     .container{
         grid-template-columns: 1fr;
         padding: 16px 20px;
