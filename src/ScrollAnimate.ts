@@ -7,7 +7,7 @@ export default class ScrollAnimate{
         this.elementsList = [...document.querySelectorAll(elementsSelector)]
         this.activeClass = activeClass
         this.callback = this.callback.bind(this);
-        this.observer = new IntersectionObserver(this.callback, {"root": null, "threshold": [0.25, 0.5, 1]})
+        this.observer = new IntersectionObserver(this.callback, {"root": null, "threshold": [0, 0.5, 1]})
         
     }
 
