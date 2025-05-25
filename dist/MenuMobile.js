@@ -18,7 +18,6 @@ export default class MenuMobile {
         this.buttonMenu?.addEventListener("pointerdown", this.toggleMenu);
     }
     init() {
-        console.log(this.menuElement);
         if (this.buttonMenu && this.menuElement) {
             this.addEvent();
         }

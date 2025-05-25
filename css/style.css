@@ -38,9 +38,7 @@ h1 {
   color: #151b1f;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+
 
 .subtitulo {
   display: block;
@@ -79,6 +77,17 @@ html{
 
 .bg {
   background-image: linear-gradient(90deg, #457fca, #5691c8);
+  background-size: 300%;
+  animation: bg-move 3s infinite alternate-reverse;
+}
+
+@keyframes bg-move {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 100%;
+  }
 }
 
 .bg .text {
@@ -91,7 +100,60 @@ html{
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  column-gap: 60px;
+}
+
+[data-animate]{
+  opacity: 0;
+}
+
+[data-animate].active{
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+[data-animate="slide-right"].active{
+  animation-name: slide-right;
+}
+[data-animate="slide-left"].active{
+  animation-name: slide-left;
+}
+[data-animate="slide-top"].active{
+  animation-name: slide-top;
+}
+
+
+@keyframes slide-right {
+  0%{
+    transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes slide-left {
+  0%{
+    transform: translate3d(-40px, 0, 0);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes slide-top {
+  0%{
+    transform: translate3d(0, -40px, 0);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
 }
 
 
@@ -138,14 +200,19 @@ p a{
     text-decoration: underline;
 }
 
+.exposicoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 32px;
+}
+
 .link-exposicao {
   display: block;
   font-family: 'Realce';
   font-size: 1.5rem;
   color: #fff;
   text-align: right;
-  margin-bottom: 32px;
-  
 }
 
 .link-exposicao:hover{
@@ -155,6 +222,7 @@ p a{
 #img_ipiranga {
     position: relative;
     display: inline-block;
+    margin-bottom: 60px;
 }
 
 #img_ipiranga::after {
@@ -246,7 +314,18 @@ p a{
 
 @media (max-width:760px) {
 
-    
+    h1{
+      margin-bottom: 1rem;
+    }
+
+    .exposicoes{
+      flex-direction: row;
+      justify-content: start;
+    }
+
+    .container{
+      row-gap: 2rem;
+    }
 
     #menu-button{
       display: block;
@@ -256,24 +335,33 @@ p a{
     }
 
     .menu.active{
-      display: flex;
-      padding: 20px;
+      display: block;
+      padding: 20px 0;
       background-color: #fff;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
       position: relative;
-      flex-direction: column;
     }
 
     .menu.active a{
+      display: block;
+      padding: 12px 0;
       font-size: 2rem;
+    }
+
+    .menu.active a::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #f0f2f4;
     }
 
     .container{
         grid-template-columns: 1fr;
-        padding: 16px 20px;
+        padding: 40px 20px;
     }
     .link-exposicao {
         text-align: left;
